@@ -14,5 +14,6 @@
         <file>Image_Card.qml</file>
         <file>List_ImageCard.qml</file>
         <file>ImageMouseMenu.qml</file>
+        <file>ImageMouseMenu_Delegate.qml</file>
     </qresource>
 </RCC>
