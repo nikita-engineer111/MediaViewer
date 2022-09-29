@@ -9,7 +9,7 @@ Window {
     height: 480
     title: qsTr("Photo Viewer")
     color: global_color.backgrond
-
+//new comment
     Component.onCompleted: {
         core.showMaximized()
         rootImage.source="file:///"+images
