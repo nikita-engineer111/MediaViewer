@@ -40,8 +40,12 @@ Item {
             mipmap: true
             fillMode: Image.PreserveAspectFit
             transformOrigin: Item.Center
-            scale: 1//Math.min(root.width / width, root.height / height, 1) + zoom
+            scale: /*1//*/Math.min(root.width / width, root.height / height, 1) + zoom
             property variant arrayPhoto: []
+            Behavior on scale{
+                NumberAnimation{duration: 150}
+            }
+
             onSourceChanged:{
                 if(!menuImage.opened)
                 {
@@ -51,6 +55,7 @@ Item {
                     arrayPhoto = fileInfo.getFilesDirectoty(source)
                     menuImage.listOtherPhoto.reloadList(arrayPhoto)
                 }
+                zoom = 0.0
             }
 
             //Shadow
@@ -79,7 +84,7 @@ Item {
 //                else
 //                    if (image.zoom > 0) image.zoom = Number((image.zoom - image.zoomStep).toFixed(1))
 
-                image.scale += wheel.angleDelta.y/1200
+                image.zoom/*scale*/ += wheel.angleDelta.y/2000
                 wheel.accepted=true
             }
 

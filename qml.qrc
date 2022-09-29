@@ -13,5 +13,6 @@
         <file>RoundImage.qml</file>
         <file>Image_Card.qml</file>
         <file>List_ImageCard.qml</file>
+        <file>ImageMouseMenu.qml</file>
     </qresource>
 </RCC>
