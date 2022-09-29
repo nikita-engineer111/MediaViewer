@@ -1,5 +1,6 @@
 #include "mv_fileinfo.h"
-
+#include "QMatrix"
+#include "QPoint"
 
 QString MV_FileInfo::getFileName(QString path)
 {
@@ -47,4 +48,15 @@ QVariant MV_FileInfo::getFilesDirectoty(QString path)
     }
 
     return QVariant::fromValue(list);
+}
+void MV_FileInfo::removeFile(QString path)
+{
+    QDir().remove(path);
+}
+void MV_FileInfo::saveAsFile(QString imgPath,QString savePath,int resolution, int rotate)
+{
+    QImage img(imgPath);
+    QImage rotated_image = img.transformed(QTransform().rotate(rotate));
+    rotated_image.save(savePath, "jpg", resolution);
+    qDebug() << imgPath << resolution ;
 }

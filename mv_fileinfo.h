@@ -6,6 +6,7 @@
 #include <QDateTime>
 #include <QDir>
 #include <QDirIterator>
+#include <QImage>
 
 class MV_FileInfo : public QObject
 {
@@ -18,6 +19,8 @@ public:
     Q_INVOKABLE qint64 getFileSize(QString path);
     Q_INVOKABLE QString getFileDateCreated(QString path);
     Q_INVOKABLE QVariant getFilesDirectoty(QString path);
+    Q_INVOKABLE void removeFile(QString path);
+    Q_INVOKABLE void saveAsFile(QString imgPath,QString savePath,int resolution, int rotate);
 
 private:
 

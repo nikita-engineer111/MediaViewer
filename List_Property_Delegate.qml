@@ -2,14 +2,14 @@ import QtQuick 2.0
 
 Item {
     id: root
-    width: 222
+    width: 283
     height: 20
     property alias title: title.text
     property alias value: value.text
     Rectangle{
         id: backgroundDelegate
         anchors.fill: parent
-        color: "#17212B"//core.global_color.selectBackground
+        color: "#17212B"
         opacity: 0
         radius: 20
 

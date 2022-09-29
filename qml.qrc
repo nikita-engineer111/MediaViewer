@@ -15,5 +15,9 @@
         <file>List_ImageCard.qml</file>
         <file>ImageMouseMenu.qml</file>
         <file>ImageMouseMenu_Delegate.qml</file>
+        <file>ImageRotation.qml</file>
+        <file>Image_SaveAs.qml</file>
+        <file>MV_Button.qml</file>
+        <file>MV_Slider.qml</file>
     </qresource>
 </RCC>

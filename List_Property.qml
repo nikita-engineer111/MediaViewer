@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 
 ScrollView{
     id: root
-    width: 230
+    width: 291
     ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
     property bool updated: false
     ListView{

@@ -90,33 +90,13 @@ Item{
         anchors.top: backgrond.top
         anchors.topMargin: 6
     }
-    MV_Text {
-        id: textControl
-        x: 495
-        text: "Управление:"
-        anchors.top: backgrond.top
-        anchors.topMargin: 6
-        anchors.right: parent.right
-        anchors.rightMargin: 38
-    }
-    Line{
-        x: 487
-        y: 20
-
-        width: 2
-        height: backgrond.height
-        anchors.right: textControl.left
-        anchors.rightMargin: 6
-        anchors.verticalCenterOffset: 0
-        anchors.verticalCenter: backgrond.verticalCenter
-    }
 
     MV_Text {
         id: textProperty
-        x: 251
+        x: 329
         y: 26
         text: "Свойства:"
-        anchors.rightMargin: 304
+        anchors.rightMargin: 226
         anchors.right: parent.right
         anchors.top: backgrond.top
         anchors.topMargin: 6
@@ -124,15 +104,15 @@ Item{
     property alias list_Property: list_Property
     List_Property{
         id: list_Property
-        x: 251
-        width: 230
+        x: 329
+        width: 291
         clip: true
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 3
         anchors.top: parent.top
         anchors.topMargin: 50
         anchors.right: parent.right
-        anchors.rightMargin: 159
+        anchors.rightMargin: 20
     }
 
     Line {
