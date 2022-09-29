@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ImageProvider.qml</file>
+        <file>VideoProvider.qml</file>
+        <file>MenuImage.qml</file>
+        <file>source/item/arrow.png</file>
+        <file>MV_Text.qml</file>
+        <file>Line.qml</file>
+        <file>List_Property.qml</file>
+        <file>List_Property_Delegate.qml</file>
+        <file>MV_InputText.qml</file>
+        <file>RoundImage.qml</file>
+        <file>Image_Card.qml</file>
+        <file>List_ImageCard.qml</file>
+    </qresource>
+</RCC>
