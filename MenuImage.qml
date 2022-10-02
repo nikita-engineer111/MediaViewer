@@ -14,7 +14,7 @@ Item{
 
     Rectangle {
         id:backgrond
-        color: "#17212B"//core.global_color.selectBackground
+        color: "#17212B"
         opacity: 0.85
         anchors.fill: parent
         anchors.topMargin: 20

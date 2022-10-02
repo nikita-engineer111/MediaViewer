@@ -70,7 +70,7 @@ Rectangle {
         id: button_file_resolution
         x: 307
         y: 72
-        title: quality_slider.value+"%"
+        title: quality_slider.value_private+"%"
     }
 
     MV_Slider{

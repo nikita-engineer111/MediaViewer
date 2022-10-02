@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     QString strCount = argv[1];
     QString rplStr = QString::fromLocal8Bit(argv[1],strCount.length());
     QString hndlStr = handleString.replace(rplStr,"\\\\","/");
-    ctx->setContextProperty("images", hndlStr);
+    ctx->setContextProperty("files", hndlStr);
 
 
     MV_FileInfo fileInfo;

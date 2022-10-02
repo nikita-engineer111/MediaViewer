@@ -19,5 +19,9 @@
         <file>Image_SaveAs.qml</file>
         <file>MV_Button.qml</file>
         <file>MV_Slider.qml</file>
+        <file>AudioProvider.qml</file>
+        <file>AudioAnimation.qml</file>
+        <file>AudioMenu.qml</file>
+        <file>ButtonPlay.qml</file>
     </qresource>
 </RCC>

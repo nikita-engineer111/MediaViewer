@@ -9,17 +9,28 @@ Window {
     height: 480
     title: qsTr("Media Viewer")
     color: global_color.backgrond
+    property string fileFormat
     Component.onCompleted: {
         core.showMaximized()
-        rootImage.source="file:///"+images
+
+        name.text = files
+        fileFormat = handleString.removeBegin(files,name.text.length-3)
+        if(fileFormat=="jpg"||fileFormat=="png"||fileFormat=="bmp"||fileFormat=="svg")
+        {
+            rootImage.visible = true
+            rootAudio.visible = false
+            rootImage.source="file:///"+files
+        }
+        if(fileFormat=="mp3"||fileFormat=="mpc"||fileFormat=="wav"||fileFormat=="wma"||
+           fileFormat=="m4a"||fileFormat=="m4b"||fileFormat=="m4p")
+        {
+            rootImage.visible = false
+            rootAudio.visible = true
+            rootAudio.audio.source = "file:///"+files
+            rootAudio.audio.play()
+        }
     }
-    TextInput {
-        id: name
-        text: rootImage.source
-        selectByMouse: true
-        font.pixelSize: 30
-        anchors.centerIn: parent
-    }
+
 
     MouseArea{
         id: mArea
@@ -36,6 +47,20 @@ Window {
     }
     ImageProvider{
         id: rootImage
+        //visible: false
+    }
+    AudioProvider{
+        id: rootAudio
+        //visible: true
+
+    }
+    TextInput {
+        id: name
+        text: rootImage.source
+        selectByMouse: true
+        font.pixelSize: 30
+        anchors.centerIn: parent
+        visible: false
     }
 
 
