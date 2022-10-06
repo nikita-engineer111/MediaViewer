@@ -12,13 +12,13 @@ QString MV_FileInfo::getFilePath(QString path)
     QFileInfo fileInfo(path);
     return fileInfo.filePath();
 }
-qint64 MV_FileInfo::getFileSize(QString path)
+QString MV_FileInfo::getFileSize(QString path)
 {
     //doesnt work. return 0
     QFileInfo fileInfo(path);
     fileInfo.setFile(path);
     //qDebug() << path << fileInfo.size();
-    return fileInfo.size();
+    return QString::number(fileInfo.size());
 }
 QString MV_FileInfo::getFileDateCreated(QString path)
 {

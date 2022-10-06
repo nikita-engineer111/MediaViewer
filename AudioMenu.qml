@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
     id: root
-    height: 70
+    height: 75
     anchors.bottom: parent.bottom
     width: /*640//*/parent.width
     color: "#17212B"
@@ -53,7 +53,7 @@ Rectangle {
         id: slider_value
         x: 209
         y: 0
-        text: slider_position.value
+        text: slider_position.value+"%"
         anchors.topMargin: 40
         anchors.rightMargin: 8
         anchors.top: parent.top
@@ -93,10 +93,43 @@ Rectangle {
         anchors.top: parent.top
         anchors.right: audio_duration.left
     }
+
+    MV_InputText {
+        id: audio_name
+        y: 4
+        text: fileInfo.getFileName(audio.source)
+        anchors.left: parent.left
+        anchors.leftMargin: 16
+        anchors.topMargin: 16
+        anchors.top: parent.top
+        readOnly: true
+    }
+    MV_Button_Image{
+        id: previous_track
+        x: 16
+        y: 40
+
+    }
+
+    MV_Button_Image {
+        id: next_track
+        y: 40
+        anchors.left: previous_track.right
+        anchors.leftMargin: 11
+    }
+
+    MV_Button_Image {
+        id: repeat_track
+        y: 40
+        anchors.left: next_track.right
+        anchors.leftMargin: 11
+        source: "qrc:/source/item/repeater.png"
+        replaceSource: "qrc:/source/item/repeater_purple.png"
+    }
 }
 
 /*##^##
 Designer {
-    D{i:2;anchors_y:12}D{i:3;anchors_y:12}
+    D{i:2;anchors_y:12}D{i:3;anchors_y:12}D{i:4;anchors_y:12}D{i:5;anchors_x:131;anchors_y:12}
 }
 ##^##*/

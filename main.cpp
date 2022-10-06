@@ -8,7 +8,8 @@
 #include <mv_fileinfo.h>
 #include <config.h>
 #include "handlestring.h"
-using namespace std;
+//#include "QProcess"
+//#include "QTcpSocket"
 
 int main(int argc, char *argv[])
 {
@@ -16,6 +17,38 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
+    /*QTcpSocket *socket = new QTcpSocket;
+    socket->connectToHost("10.61.2.120", 23);
+    if(socket->waitForConnected(3000))
+    {
+        qDebug() << "ok";
+    }
+    else
+    {
+        qDebug() << "no";
+    }
+    QByteArray data;
+    QObject::connect(socket, &QTcpSocket::readyRead, [socket, &data] ()
+    {
+        data += socket->readAll();
+        if(data.endsWith("Login:"))
+        {
+            socket->write("n.fomichev\n");
+            socket->flush();
+        }
+        if(data.endsWith("Password:"))
+        {
+            socket->write("AjvbXtd492\n");
+            socket->flush();
+        }
+        if(data.endsWith("120#"))
+        {
+            socket->write("sh logging file\n \n \n \n \n");
+            socket->flush();
+        }
+        qDebug() << data;
+    });*/
+
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
@@ -39,6 +72,8 @@ int main(int argc, char *argv[])
 
     Config config;
     ctx->setContextProperty("config", &config);
+
+
 
     engine.load(url);
     return app.exec();

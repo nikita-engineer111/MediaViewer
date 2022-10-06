@@ -16,7 +16,7 @@ public:
     //MV_FileInfo();
     Q_INVOKABLE QString getFileName(QString path);
     Q_INVOKABLE QString getFilePath(QString path);
-    Q_INVOKABLE qint64 getFileSize(QString path);
+    Q_INVOKABLE QString getFileSize(QString path);
     Q_INVOKABLE QString getFileDateCreated(QString path);
     Q_INVOKABLE QVariant getFilesDirectoty(QString path);
     Q_INVOKABLE void removeFile(QString path);

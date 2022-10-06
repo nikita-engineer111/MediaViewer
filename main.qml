@@ -6,7 +6,9 @@ Window {
     id: core
     visible: true
     width: 640
+    minimumWidth: 640
     height: 480
+    minimumHeight: 480
     title: qsTr("Media Viewer")
     color: global_color.backgrond
     property string fileFormat

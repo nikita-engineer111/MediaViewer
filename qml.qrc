@@ -23,5 +23,8 @@
         <file>AudioAnimation.qml</file>
         <file>AudioMenu.qml</file>
         <file>ButtonPlay.qml</file>
+        <file>source/item/repeater.png</file>
+        <file>source/item/repeater_purple.png</file>
+        <file>MV_Button_Image.qml</file>
     </qresource>
 </RCC>
