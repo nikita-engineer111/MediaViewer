@@ -26,5 +26,12 @@
         <file>source/item/repeater.png</file>
         <file>source/item/repeater_purple.png</file>
         <file>MV_Button_Image.qml</file>
+        <file>source/item/next.png</file>
+        <file>source/item/next_purple.png</file>
+        <file>source/item/no_sound.png</file>
+        <file>source/item/no_sound_purple.png</file>
+        <file>source/item/sound.png</file>
+        <file>source/item/sound_purple.png</file>
+        <file>Button_Sound_Volume.qml</file>
     </qresource>
 </RCC>

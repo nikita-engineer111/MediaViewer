@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtMultimedia 5.8
 
 Rectangle {
     id: root
@@ -51,10 +52,10 @@ Rectangle {
 
     MV_Text {
         id: slider_value
-        x: 209
+        x: 325
         y: 0
         text: slider_position.value+"%"
-        anchors.topMargin: 40
+        anchors.topMargin: 46
         anchors.rightMargin: 8
         anchors.top: parent.top
         anchors.right: parent.right
@@ -107,15 +108,23 @@ Rectangle {
     MV_Button_Image{
         id: previous_track
         x: 16
-        y: 40
-
+        y: 45
+        width: 18
+        height: 20
+        source: "qrc:/source/item/next.png"
+        replaceSource: "qrc:/source/item/next_purple.png"
+        rotation: 180
     }
 
     MV_Button_Image {
         id: next_track
-        y: 40
-        anchors.left: previous_track.right
-        anchors.leftMargin: 11
+        y: 45
+        width: 18
+        height: 20
+        anchors.left: previous_track.left
+        anchors.leftMargin: 29
+        source: "qrc:/source/item/next.png"
+        replaceSource: "qrc:/source/item/next_purple.png"
     }
 
     MV_Button_Image {
@@ -124,7 +133,30 @@ Rectangle {
         anchors.left: next_track.right
         anchors.leftMargin: 11
         source: "qrc:/source/item/repeater.png"
-        replaceSource: "qrc:/source/item/repeater_purple.png"
+        replaceSource: "qrc:/source/item/repeater.png"
+        mArea.onClicked: {
+            if(audio.loops !== Audio.Infinite)
+            {
+                audio.loops = Audio.Infinite
+                source = "qrc:/source/item/repeater_purple.png"
+                defaultSource = "qrc:/source/item/repeater_purple.png"
+                replaceSource = "qrc:/source/item/repeater_purple.png"
+            }
+            else{
+                audio.loops = 0
+                source = "qrc:/source/item/repeater.png"
+                defaultSource = "qrc:/source/item/repeater.png"
+                replaceSource = "qrc:/source/item/repeater.png"
+            }
+        }
+    }
+    property alias sound_Volume: sound_Volume.value
+    Button_Sound_Volume{
+        id: sound_Volume
+        y: 45
+        anchors.left: repeat_track.right
+        anchors.leftMargin: 11
+
     }
 }
 

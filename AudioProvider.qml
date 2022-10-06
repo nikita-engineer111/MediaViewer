@@ -10,6 +10,7 @@ Item {
         autoPlay: buttonPlay.playing
         //source: "file:///C:/Users/CEO/Downloads/16.mp3"
         onStopped: buttonPlay.playing = false
+        volume: audioMenu.sound_Volume/100
     }
     AudioAnimation{
         id: audioAnimation
@@ -43,6 +44,6 @@ Item {
         }
     }
     AudioMenu{
-
+        id: audioMenu
     }
 }
